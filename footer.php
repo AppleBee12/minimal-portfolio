@@ -17,17 +17,16 @@
                 <a href="mailto:hello@adipurdila.com">hello@adipurdila.com</a>               
             </p>
             <ul class="social_links">
-                <li><a href=""><img src="images/twitter.png" alt="twitter"></a></li>
-                <li><a href=""><img src="images/facebook.png" alt="facebook"></a></li>
-                <li><a href=""><img src="images/dribble.png" alt="dribble"></a></li>
+                <li><a href=""><img src="<?= IMAGES;?>/twitter.png" alt="twitter"></a></li>
+                <li><a href=""><img src="<?= IMAGES;?>/facebook.png" alt="facebook"></a></li>
+                <li><a href=""><img src="<?= IMAGES;?>/dribble.png" alt="dribble"></a></li>
             </ul>
             <hr>
             <p>
-                (c) Copyright 2024. Portfolio theme by applebee.
+                (c) Copyright 2020. Portfolio theme by alikerock.
             </p>
         </div>
-
-        <?php  wp_footer.php ?>
     </footer>
+    <?php wp_footer(); ?>
 </body>
 </html>

@@ -1,16 +1,17 @@
-/**
- * Theme Name:        My ultra fantastic minimal portfolio
- * Theme URI:         https://example.com/applebee
- * Description:       simple portfolio profile page
- * Version:           2.0.0
- * Author:            applebee
- * Author URI:        https://example.com/applebee
- * Tags:              minimalf, profile, portfolio page
- * Text Domain:       applebee
- * Domain Path:       /assets/lang
- * Tested up to:      7.1
- * Requires at least: 6.2
- * Requires PHP:      7.4
- * License:           GNU General Public License v2.0 or later
- * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
- */
+ /*
+Theme Name: My ultra fantastic minimal portfolio
+Theme URI: https://example.com/themes/applebee/
+Author: the WordPress team
+Author URI: https://example.com/
+Description: minimal portfolio
+Tags:bootstrap, portfolio, responsive
+Version: 2.0.0
+Requires at least: 6.0
+Tested up to: 6.0
+Requires PHP: 7.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: applebee
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
