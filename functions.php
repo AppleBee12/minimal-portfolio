@@ -20,3 +20,14 @@ if(! function_exists('minimal_script')){
   }
   add_action('wp_enqueue_scripts', 'minimal_script');
 }
+
+function register_my_menu() {
+  register_nav_menus(
+    array(
+      'header-menu' => __( 'Header Menu' )
+     )
+   );
+ }
+ add_action( 'init', 'register_my_menu' );
+
+add_theme_support( 'post-thumbnails' );
