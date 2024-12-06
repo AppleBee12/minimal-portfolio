@@ -32,12 +32,13 @@
       wp_reset_query();
     ?>               
     </div>
-    <p class="pagenation shadow">
-        <a href="" class="secondary-btn active">1</a>      
+    <!-- <p class="pagenation shadow"> -->
+        <!-- <a href="" class="secondary-btn active">1</a>      
         <a href="" class="secondary-btn">2</a>      
         <a href="" class="secondary-btn">3</a>      
-        <a href="" class="secondary-btn">4</a>      
-    </p>
+        <a href="" class="secondary-btn">4</a>       -->
+        <?php echo minimal_pagination() ?>
+    <!-- </p> -->
 </div>
 
 <?php get_footer() ?>

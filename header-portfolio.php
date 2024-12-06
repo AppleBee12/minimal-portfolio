@@ -7,7 +7,7 @@
     <title>Minimal Portfolio</title>
   <?php wp_head(); ?>
 </head>
-<body><?php body_class();?>
+<body <?php body_class();?>>
     <header class="portfolio">
        <h1 class="logo"><a href="">Minimal Portfolio Theme</a></h1>
        <nav>
@@ -21,7 +21,23 @@
        </nav>      
        <hr>
        <ul class="portfolio_links">
-           <li><a href="<?php bloginfo('url') ?>/category/minimal-portfolio/" class="secondary-btn active">All</a></li>
+            <?php
+                $currentURI = $_SERVER['REQUEST_URI'];
+                $urlArr = explode('/',$currentURI);
+                $urlArrLast = $urlArr[count($urlArr)-2];
+                $catNameOrg = str_replace('minimal-portfolio','',$urlArrLast);
+                $catName = str_replace('-','',$catNameOrg);
+             
+                // echo $catName;
+
+            ?>
+
+           <li>
+            <a 
+                href="<?php bloginfo('url') ?>/category/minimal-portfolio/" 
+                class="secondary-btn <?php echo $catName === '' ?  'active':''; ?>"
+                >All</a></li>
+
            <!-- <li><a href="" class="secondary-btn">Print</a></li>
            <li><a href="" class="secondary-btn">Web</a></li>
            <li><a href="" class="secondary-btn">Mobile</a></li> -->
@@ -30,21 +46,22 @@
             $categories = get_categories( array(
                 'orderby' => 'name',
                 'order'   => 'ASC',
-                'child_of'=>14,
-                'hide_empty'=>false,
+                'child_of' => 11,
+                'hide_empty' => false,
             ) );
 
             foreach( $categories as $category ) {
+                $category->name === $catName ? $activeClass="active":$activeClass='';
                 $category_link = sprintf( 
-                    '<a href="%1$s" alt="%2$s" class="secondary-btn">%3$s</a>',
+                    '<a href="%1$s" alt="%2$s" class="secondary-btn '.$activeClass.'">%3$s</a>',
                     esc_url( get_category_link( $category->term_id ) ),
-                    esc_attr( sprintf( __( 'View all posts in %s', 'applebee' ), $category->name ) ),
+                    esc_attr( sprintf( __( 'View all posts in %s', 'ezweb' ), $category->name ) ),
                     esc_html( $category->name )
                 );
                 
                 echo '<li>' .  $category_link  . '</li> ';
+               
             } 
-
             ?>
        </ul>        
     </header>

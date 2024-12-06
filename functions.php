@@ -31,3 +31,27 @@ function register_my_menu() {
  add_action( 'init', 'register_my_menu' );
 
 add_theme_support( 'post-thumbnails' );
+
+
+if(! function_exists('minimal_pagination')){
+  function minimal_pagination(){
+    $args = array(
+        'prev_next' => false,
+        'type' => 'array',
+        
+      ) ;
+
+    $pagination = paginate_links($args);
+    print_r($pagination);
+
+    if(is_array($pagination) && count($pagination) > 0){
+      echo '<p class="pagenation shadow">';
+        foreach ($pagination as $page){
+
+
+
+        }
+      echo '</p>';
+    }
+  }
+}

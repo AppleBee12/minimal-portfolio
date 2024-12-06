@@ -7,8 +7,7 @@
     <title>Minimal Portfolio</title>
   <?php wp_head(); ?>
 </head>
-<body>
-    <?php body_class();?>
+<body <?php body_class();?>>
     <header>
        <h1 class="logo"><a href="">Minimal Portfolio Theme</a></h1>
        <nav>
@@ -20,8 +19,10 @@
            </ul> -->
            <?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
        </nav>  
-       
-       
+       <hr>
+       <p class="portfolio_links">
+           <a href="<?php bloginfo('url')?>/category/minimal-portfolio/" class="secondary-btn">&larr; Back to Portfolio</a>          
+       </p>            
     </header>
     <hr>
     <main class="content">
